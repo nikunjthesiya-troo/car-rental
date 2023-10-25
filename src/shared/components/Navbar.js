@@ -21,10 +21,10 @@ const Navbar = () => {
 										<p className="text-sm lg:text-base">{route.name} +</p>
 									</div>
 									<div
-										class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] hs-dropdown-open:opacity-100 opacity-0 w-72 hidden z-10 mt-2 min-w-[15rem] shadow-md rounded-lg p-2 "
+										class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] hs-dropdown-open:opacity-100 opacity-0 w-72 hidden z-10 mt-2 min-w-[15rem] shadow-md rounded-lg"
 										aria-labelledby="hs-dropdown-default"
 									>
-										<div className="flex flex-col items-start gap-3 w-full bg-troo-primary text-troo-secondary py-4 px-6 rounded-lg">
+										<div className="flex flex-col items-start gap-5 w-full bg-troo-primary text-troo-light py-4 px-6 rounded-lg">
 											{route.subPages?.map((nav, i) => {
 												return <Link to={nav.path}>{nav.name}</Link>;
 											})}

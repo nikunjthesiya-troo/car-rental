@@ -1,7 +1,12 @@
 /** @type {import('tailwindcss').Config} */
+const { nextui } = require("@nextui-org/react");
+
 module.exports = {
 	mode: "jit",
-	content: ["./src/**/*.{js,jsx,ts,tsx}", "node_modules/preline/dist/*.js"],
+	content: [
+		"./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
+		"./src/**/*.{js,jsx,ts,tsx}",
+	],
 	theme: {
 		extend: {
 			backgroundImage: {
@@ -43,5 +48,5 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [require("preline/plugin")],
+	plugins: [nextui()],
 };

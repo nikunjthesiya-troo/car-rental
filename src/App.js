@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ROUTES } from "./shared/constants/routes";
 import Home from "./shared/pages/Home";
-import("preline");
 
 function App() {
 	return (
