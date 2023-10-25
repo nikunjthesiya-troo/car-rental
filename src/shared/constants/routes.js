@@ -1,0 +1,16 @@
+export const ROUTES = {
+	home: "/",
+	aboutUs: "/about-us",
+	ourFleets: "/our-fleets",
+	carDetails: "/our-fleets/car-details",
+	ourTeam: "/our-team",
+	portfolioDetails: "/portfolio/portfolio-details",
+	clientReview: "/client-reviews",
+	pricingPackage: "/pricing-package",
+	faqs: "/faqs",
+	contactUs: "/contact-us",
+	ourBlogs: "/our-blogs",
+	blogDetails: "/our-blogs/blog-details",
+	errorPage: "/404",
+	bookingForm: "/booking-form",
+};
