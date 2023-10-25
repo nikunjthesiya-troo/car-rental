@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 import Header from "./Header";
-// import Footer from "./Footer";
+import Footer from "./Footer";
 
 const Layout = ({ children }) => {
 	return (
@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
 			<Header />
 			<Navbar />
 			{children}
-			{/* <Footer /> */}
+			<Footer />
 		</>
 	);
 };
