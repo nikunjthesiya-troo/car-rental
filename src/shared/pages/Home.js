@@ -16,7 +16,6 @@ const Home = () => {
 			<HeroSection />
 			<ServiceSection />
 			<CarListSection />
-			<AboutSection />
 			<VideoPlayer />
 			<TeamSection />
 			<TestimonialSection />

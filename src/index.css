@@ -112,6 +112,9 @@ a {
 .btn-theme-primary-outlined {
   @apply md:py-4 md:px-5 px-4 py-3 border border-troo-primary text-troo-primary bg-transparent rounded-br-lg rounded-tl-lg text-sm md:text-base items-center gap-3 whitespace-nowrap
 }
+.btn-theme-primary-outlined {
+  @apply py-4 px-5 border border-troo-primary text-troo-primary bg-transparent rounded-br-lg rounded-tl-lg text-base items-center gap-3 whitespace-nowrap
+}
 
 option {
   @apply text-troo-secondary
