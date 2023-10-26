@@ -114,12 +114,12 @@ const Footer = () => {
 						</p>
 					</div>
 					<div className="bg-troo-primary-light bg-opacity-5 w-full p-7 rouned-lg flex flex-col items-start gap-4">
-						<p className="font-bold text-2xl uppercase">Our Newslatter</p>
-						<div className="p-5 rounded-md bg-troo-light bg-opacity-5 outline-none flex items-center justify-between gap-2 w-full">
+						<p className="font-bold text-2xl uppercase">Our Newsletter</p>
+						<div className="px-4 py-2 rounded-md bg-troo-light bg-opacity-5 outline-none flex items-center justify-between gap-2 w-full">
 							<input
 								type="email"
 								placeholder="Email"
-								className="bg-transparent w-full outline-none"
+								className="bg-transparent border-none w-full outline-none"
 							/>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"

@@ -1,11 +1,14 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
 	mode: "jit",
-	content: ["./src/**/*.{js,jsx,ts,tsx}", "node_modules/preline/dist/*.js"],
+	content: ["node_modules/preline/dist/*.js", "./src/**/*.{js,jsx,ts,tsx}"],
 	theme: {
 		extend: {
 			backgroundImage: {
-				// "glass-effect": "url('./assets/images/glass-effect.png')",
+				"video-banner": "url('./shared/assets/images/video-bg.jpeg')",
+				"half-circle": "url('./shared/assets/images/half-circle.svg')",
+				"half-circle-2": "url('./shared/assets/images/half-circle-2.svg')",
 			},
 			colors: {
 				troo: {
@@ -43,5 +46,5 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [require("preline/plugin")],
+	plugins: [require("preline/plugin"), require("@tailwindcss/forms")],
 };
