@@ -7,12 +7,12 @@ const DownloadBanner = () => {
 	return (
 		<div className="w-full py-[80px] bg-troo-light">
 			<div className="main-container-big">
-				<div className="w-full bg-troo-primary rounded-xl text-troo-light p-16 flex flex-col md:flex-row items-center justify-between gap-6">
+				<div className="w-full bg-troo-primary rounded-xl text-troo-light p-8 md:p-16 flex flex-col md:flex-row items-center justify-between gap-6">
 					<div className="flex flex-col items-start gap-2">
 						<p className="text-xl">
 							Get our mobile app for easy and convenient usage
 						</p>
-						<h3 className="text-4xl lg:text-5xl font-bold">
+						<h3 className="text-3xl md:text-4xl lg:text-5xl font-bold">
 							Download Our Application
 						</h3>
 						<div className="flex items-center gap-2 mt-2">

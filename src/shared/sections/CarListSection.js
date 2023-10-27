@@ -8,7 +8,7 @@ const CarListSection = ({ isListingPage }) => {
 	return (
 		<div
 			className={`w-full py-[80px] text-troo-secondary ${
-				isListingPage ? "bg-troo-light" : "bg-troo-light"
+				isListingPage ? "bg-troo-light" : "bg-troo-primary-light"
 			}`}
 		>
 			<div className="main-container flex flex-col gap-8 items-center">

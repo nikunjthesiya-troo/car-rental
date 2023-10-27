@@ -9,6 +9,7 @@ module.exports = {
 				"video-banner": "url('./shared/assets/images/video-bg.jpeg')",
 				"half-circle": "url('./shared/assets/images/half-circle.svg')",
 				"half-circle-2": "url('./shared/assets/images/half-circle-2.svg')",
+				error: "url('./shared/assets/images/404.png')",
 			},
 			colors: {
 				troo: {

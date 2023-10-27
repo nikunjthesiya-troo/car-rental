@@ -41,7 +41,7 @@ const CarCard = ({ data, isListingPage }) => {
 			</div>
 			<div
 				className={`w-full flex flex-col items-start gap-3 text-troo-secondary rounded-b-lg py-4 px-6 ${
-					isListingPage ? "bg-troo-primary-light" : "bg-troo-primary-light"
+					isListingPage ? "bg-troo-primary-light" : "bg-troo-light"
 				}`}
 			>
 				<h3 className="text-2xl font-bold">{data?.title}</h3>
