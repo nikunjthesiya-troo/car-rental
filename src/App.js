@@ -10,6 +10,9 @@ import Blogs from "./shared/pages/Blogs";
 import PricingPackage from "./shared/pages/PricingPackage";
 import Contact from "./shared/pages/Contact";
 import ErrorPage from "./shared/pages/ErrorPage";
+import BookingForm from "./shared/pages/BookingForm";
+import CarDetails from "./shared/pages/CarDetails";
+import BlogDetails from "./shared/pages/BlogDetails";
 
 function App() {
 	return (
@@ -25,6 +28,9 @@ function App() {
 				<Route path={ROUTES.pricingPackage} element={<PricingPackage />} />
 				<Route path={ROUTES.contactUs} element={<Contact />} />
 				<Route path={ROUTES.errorPage} element={<ErrorPage />} />
+				<Route path={ROUTES.bookingForm} element={<BookingForm />} />
+				<Route path={ROUTES.carDetails} element={<CarDetails />} />
+				<Route path={ROUTES.blogDetails} element={<BlogDetails />} />
 			</Routes>
 		</BrowserRouter>
 	);

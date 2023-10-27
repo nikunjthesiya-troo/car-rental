@@ -5,10 +5,15 @@ const ErrorPage = () => {
 		<div className="w-full min-h-screen bg-error bg-cover bg-no-repeat bg-center text-troo-secondary">
 			<div className="main-container py-[150px] flex flex-col gap-6">
 				<div className="flex flex-col items-start">
-					<h2 className="text-8xl sm:text-9xl md:text-[200px] font-bold text-troo-yellow">
-						404
-					</h2>
-					<div className="text-xl sm:text-2xl md:text-3xl text-troo-light md:mt-20">
+					<div className="relative flex flex-col items-start z-10">
+						<h2 className="text-8xl sm:text-9xl md:text-[200px] font-bold text-troo-yellow">
+							404
+						</h2>
+						<h2 className="absolute top-0 left-0 text-8xl -z-10 scale-110 sm:text-9xl md:text-[200px] font-bold text-troo-light">
+							404
+						</h2>
+					</div>
+					<div className="text-xl sm:text-2xl md:text-3xl text-troo-light ">
 						Sorry! page did not found
 					</div>
 					<div className="text-sm sm:text-base md:text-xl text-troo-light mt-8">
