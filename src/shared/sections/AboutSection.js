@@ -1,6 +1,8 @@
 import React from "react";
 import img from "../assets/images/about.png";
 import aboutCar from "../assets/images/about-car.png";
+import { motion } from "framer-motion";
+
 const AboutSection = () => {
 	return (
 		<div className="w-full py-[80px] bg-troo-light text-troo-secondary">
@@ -10,12 +12,28 @@ const AboutSection = () => {
 						Safe. Fast. Quick
 					</h2>
 				</div>
-				<div className="flex gap-6 items-start flex-col lg:flex-row 2xl:items-center justify-between w-full sm:w-[90%]">
-					<div className="w-full overflow-hidden rounded-md">
+				<motion.div className="flex gap-6 items-start flex-col lg:flex-row 2xl:items-center justify-between w-full sm:w-[90%]">
+					<motion.div
+						initial={{ y: 30, scale: 0.9, opacity: 0 }}
+						whileInView={{ y: 1, scale: 1, opacity: 1 }}
+						transition={{
+							type: "spring",
+							stiffness: 100,
+						}}
+						className="w-full overflow-hidden rounded-md"
+					>
 						<img src={img} className="w-full h-full" alt="car" />
-					</div>
+					</motion.div>
 
-					<div className="w-full flex flex-col items-start gap-4">
+					<motion.div
+						initial={{ y: 30, scale: 0.9, opacity: 0 }}
+						whileInView={{ y: 1, scale: 1, opacity: 1 }}
+						transition={{
+							type: "spring",
+							stiffness: 100,
+						}}
+						className="w-full flex flex-col items-start gap-4"
+					>
 						<h3 className="text-3xl xl:text-4xl font-bold">
 							A Rental Service for All-Car Lovers.
 						</h3>
@@ -118,8 +136,8 @@ const AboutSection = () => {
 								/>
 							</svg>
 						</button>
-					</div>
-				</div>
+					</motion.div>
+				</motion.div>
 			</div>
 		</div>
 	);

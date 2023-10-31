@@ -72,7 +72,7 @@ a {
 }
 
 .activeNav {
-  @apply text-troo-primary
+  @apply text-troo-primary border-b border-troo-primary
 }
 
 .activeMobileNav {
@@ -107,10 +107,10 @@ a {
 }
 
 .btn-theme-primary {
-  @apply md:py-4 md:px-5 px-4 py-3 bg-troo-primary text-troo-light rounded-br-lg rounded-tl-lg text-sm md:text-base items-center gap-3 whitespace-nowrap
+  @apply md:py-4 md:px-5 px-4 py-3 bg-troo-primary text-troo-light rounded-br-lg rounded-tl-lg text-sm md:text-base items-center gap-3 whitespace-nowrap hover:bg-troo-light border border-transparent hover:border-troo-primary hover:text-troo-primary transition-all duration-150 ease-linear
 }
 .btn-theme-primary-outlined {
-  @apply md:py-4 md:px-5 px-4 py-3 border border-troo-primary text-troo-primary bg-transparent rounded-br-lg rounded-tl-lg text-sm md:text-base items-center gap-3 whitespace-nowrap
+  @apply md:py-4 md:px-5 px-4 py-3 border border-troo-primary text-troo-primary bg-transparent rounded-br-lg rounded-tl-lg text-sm md:text-base items-center gap-3 whitespace-nowrap hover:bg-troo-primary hover:text-troo-light transition-all duration-150 ease-linear
 }
 .btn-theme-light {
   @apply md:py-4 md:px-5 px-4 py-3 bg-troo-light text-troo-primary rounded-br-lg rounded-tl-lg text-sm md:text-base items-center gap-3 whitespace-nowrap

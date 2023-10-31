@@ -1,11 +1,20 @@
 import React from "react";
 import Star from "./Star";
+import { motion } from "framer-motion";
 
 const CarCard = ({ data, isListingPage }) => {
 	return (
-		<div className="w-full flex flex-col items-start rounded-md">
+		<div className="w-full flex flex-col items-start rounded-md group">
 			<div className="relative w-full rounded-t-lg overflow-hidden">
-				<div className="absolute w-full h-full top-0 left-0 p-4 flex flex-col items-center justify-between bg-troo-primary bg-opacity-70">
+				<motion.div
+					initial={{ y: 30, scale: 0.9, opacity: 0 }}
+					whileInView={{ y: 1, scale: 1, opacity: 1 }}
+					transition={{
+						type: "spring",
+						stiffness: 100,
+					}}
+					className="absolute hidden w-full h-full top-0 left-0 p-4 group-hover:flex flex-col items-center justify-between bg-troo-primary bg-opacity-70"
+				>
 					<div />
 					<div className="p-4 bg-troo-yellow text-troo-secondary text-4xl rounded-full aspect-square flex items-center justify-center text-center">
 						<svg
@@ -32,7 +41,7 @@ const CarCard = ({ data, isListingPage }) => {
 							<Star />
 						</div>
 					</div>
-				</div>
+				</motion.div>
 				<img
 					src={data?.img}
 					alt="car"

@@ -1,11 +1,13 @@
 import React from "react";
 import logo from "../../shared/assets/images/Logo.svg";
 import { NAV_ROUTES } from "../constants/navRoutes";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import PrimarySidebar from "./PrimarySidebar";
 import { PhoneCall } from "react-feather";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
+	const location = useLocation();
 	return (
 		<div className="w-full bg-troo-light text-troo-secondary">
 			<div className="main-container-r-0 flex gap-8 items-center justify-between text-sm md:text-base">
@@ -18,23 +20,35 @@ const Navbar = () => {
 							return (
 								<div class="hs-dropdown relative inline-flex">
 									<div className="flex items-center gap-3 hs-dropdown-toggle">
-										<p className="text-sm lg:text-base">{route.name} +</p>
+										<p className="text-sm py-2 lg:text-base cursor-pointer">
+											{route.name} +
+										</p>
 									</div>
 									<div
 										class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] hs-dropdown-open:opacity-100 opacity-0 w-72 hidden z-10 mt-2 min-w-[15rem] shadow-md rounded-lg"
 										aria-labelledby="hs-dropdown-default"
 									>
-										<div className="flex flex-col items-start gap-5 w-full bg-troo-primary text-troo-light py-4 px-6 rounded-lg">
+										<motion.div
+											initial={{ y: 20, scale: 0.8, x: 20 }}
+											whileInView={{ y: 1, scale: 1, x: 1 }}
+											transition={{ type: "spring", stiffness: 100 }}
+											className="flex flex-col items-start gap-5 w-full bg-troo-primary text-troo-light py-4 px-6 rounded-lg"
+										>
 											{route.subPages?.map((nav, i) => {
 												return <Link to={nav.path}>{nav.name}</Link>;
 											})}
-										</div>
+										</motion.div>
 									</div>
 								</div>
 							);
 						} else {
 							return (
-								<Link className="text-sm lg:text-base" to={route.path}>
+								<Link
+									className={`text-sm lg:text-base cursor-pointer py-2 border-b border-transparent hover:text-troo-primary hover:border-troo-primary transition-all duration-150 ease-linear ${
+										location.pathname === route.path && "activeNav"
+									}`}
+									to={route.path}
+								>
 									{route.name}
 								</Link>
 							);

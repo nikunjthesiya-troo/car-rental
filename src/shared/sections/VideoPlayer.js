@@ -1,8 +1,17 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const VideoPlayer = () => {
 	return (
-		<div className="relative w-full h-[850px] overflow-hidden bg-video-banner bg-no-repeat bg-cover bg-center">
+		<motion.div
+			initial={{ y: 30 }}
+			whileInView={{ y: 1 }}
+			transition={{
+				type: "spring",
+				stiffness: 100,
+			}}
+			className="relative w-full h-[850px] overflow-hidden bg-video-banner bg-no-repeat bg-cover bg-center"
+		>
 			<div className="relative w-full h-full flex flex-col items-center justify-center bg-troo-secondary bg-opacity-50">
 				<div className="absolute top-0 w-full bg-half-circle bg-top h-[100px]" />
 				<div className="relative before:absolute flex items-center justify-center bg-troo-light text-troo-primary rounded-full p-8 text-4xl z-[1]">
@@ -26,7 +35,7 @@ const VideoPlayer = () => {
 				</div>
 				<div className="absolute rotate-180 bottom-0 w-full bg-half-circle-2 bg-top h-[100px]" />
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 

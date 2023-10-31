@@ -3,6 +3,7 @@ import { CARS } from "../constants";
 import CarCard from "../components/CarCard";
 import { Link } from "react-router-dom";
 import { ROUTES } from "../constants/routes";
+import { motion } from "framer-motion";
 
 const CarListSection = ({ isListingPage }) => {
 	return (
@@ -27,10 +28,40 @@ const CarListSection = ({ isListingPage }) => {
 				<div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-4 gap-y-14">
 					{isListingPage
 						? CARS?.map((data, i) => {
-								return <CarCard isListingPage={isListingPage} data={data} />;
+								return (
+									<motion.div
+										key={i}
+										initial={{ y: 30, scale: 0.9, opacity: 0 }}
+										whileInView={{ y: 1, scale: 1, opacity: 1 }}
+										whileHover={{ scale: 0.95 }}
+										transition={{
+											type: "spring",
+											stiffness: 100,
+											delay: 0.1 * i,
+										}}
+										className="w-full cursor-pointer"
+									>
+										<CarCard isListingPage={isListingPage} data={data} />
+									</motion.div>
+								);
 						  })
 						: CARS?.slice(0, 5)?.map((data, i) => {
-								return <CarCard isListingPage={isListingPage} data={data} />;
+								return (
+									<motion.div
+										key={i}
+										initial={{ y: 30, scale: 0.9, opacity: 0 }}
+										whileInView={{ y: 1, scale: 1, opacity: 1 }}
+										whileHover={{ scale: 0.95 }}
+										transition={{
+											type: "spring",
+											stiffness: 100,
+											delay: 0.1 * i,
+										}}
+										className="w-full cursor-pointer"
+									>
+										<CarCard isListingPage={isListingPage} data={data} />
+									</motion.div>
+								);
 						  })}
 				</div>
 				{!isListingPage && (

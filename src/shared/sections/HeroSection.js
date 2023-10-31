@@ -1,12 +1,18 @@
 import React from "react";
 import HeroImg from "../../shared/assets/images/hero-img.png";
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
 	return (
 		<div className="w-full py-[80px] bg-troo-primary-light text-troo-secondary">
 			<div className="relative main-container flex flex-col gap-8 items-start justify-between">
 				<div className="w-full flex md:flex-row flex-col items-start justify-between gap-16">
-					<div className="w-full flex flex-col  2xl:mt-32 items-start gap-4">
+					<motion.div
+						initial={{ x: 50 }}
+						whileInView={{ x: 1 }}
+						transition={{ type: "spring", stiffness: 100, duration: 2000 }}
+						className="w-full flex flex-col  2xl:mt-32 items-start gap-4"
+					>
 						<h2 className="text-4xl md:text-5xl 2xl:text-7xl font-bold">
 							We try our best to make your drive memorable
 						</h2>
@@ -51,16 +57,26 @@ const HeroSection = () => {
 								</svg>
 							</button>
 						</div>
-					</div>
-					<div className="w-full overflow-hidden rounded-lg">
+					</motion.div>
+					<motion.div
+						initial={{ x: -50, scale: 0.9 }}
+						whileInView={{ x: 1, scale: 1 }}
+						transition={{ type: "spring", stiffness: 100, duration: 2000 }}
+						className="w-full overflow-hidden rounded-lg"
+					>
 						<img
 							src={HeroImg}
 							alt="hero img"
 							className="w-full h-full object-cover object-center"
 						/>
-					</div>
+					</motion.div>
 				</div>
-				<div className="xl:absolute w-full xl:w-[80%] p-8 rounded-lg bg-troo-light left-[5%] shadow-xl bottom-8 flex items-end flex-wrap lg:flex-nowrap gap-4 justify-between">
+				<motion.div
+					initial={{ x: 50 }}
+					whileInView={{ x: 1 }}
+					transition={{ type: "spring", stiffness: 100, duration: 2000 }}
+					className="xl:absolute w-full xl:w-[80%] p-8 rounded-lg bg-troo-light left-[5%] shadow-xl bottom-8 flex items-end flex-wrap lg:flex-nowrap gap-4 justify-between"
+				>
 					<div className="flex flex-col items-start gap-3 w-full">
 						<p>Car Type</p>
 						<select className="py-3 px-4 pr-9 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 bg-troo-primary bg-opacity-10 sm:p-4">
@@ -115,7 +131,7 @@ const HeroSection = () => {
 							/>
 						</svg>
 					</button>
-				</div>
+				</motion.div>
 			</div>
 		</div>
 	);

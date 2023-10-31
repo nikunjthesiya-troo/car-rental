@@ -2,12 +2,21 @@ import React from "react";
 import screens from "../assets/images/screens.png";
 import playStore from "../assets/images/googleplay.svg";
 import appStore from "../assets/images/appstore.svg";
-
+import { motion } from "framer-motion";
 const DownloadBanner = () => {
 	return (
 		<div className="w-full py-[80px] bg-troo-light">
 			<div className="main-container-big">
-				<div className="w-full bg-troo-primary rounded-xl text-troo-light p-8 md:p-16 flex flex-col md:flex-row items-center justify-between gap-6">
+				<motion.div
+					initial={{ y: 30, scale: 0.9, opacity: 0 }}
+					whileInView={{ y: 1, scale: 1, opacity: 1 }}
+					whileHover={{ scale: 0.95 }}
+					transition={{
+						type: "spring",
+						stiffness: 100,
+					}}
+					className="w-full bg-troo-primary rounded-xl text-troo-light p-8 md:p-16 flex flex-col md:flex-row items-center justify-between gap-6"
+				>
 					<div className="flex flex-col items-start gap-2">
 						<p className="text-xl">
 							Get our mobile app for easy and convenient usage
@@ -61,7 +70,7 @@ const DownloadBanner = () => {
 					<div className="bg-troo-light bg-opacity-10 rounded-full relative p-6">
 						<img src={screens} alt="screens" className="w-full" />
 					</div>
-				</div>
+				</motion.div>
 			</div>
 		</div>
 	);
