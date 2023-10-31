@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
 import { ROUTES } from "../constants/routes";
 
 const Breadcrumbs = () => {
@@ -10,7 +11,15 @@ const Breadcrumbs = () => {
 		?.filter((x) => x);
 
 	return (
-		<div className="text-sm bg-troo-primary py-3 px-6 rounded-lg border-4 shadow-lg border-troo-primary-light">
+		<motion.div
+			initial={{ y: 30, scale: 0.9, opacity: 0 }}
+			whileInView={{ y: 1, scale: 1, opacity: 1 }}
+			transition={{
+				type: "spring",
+				stiffness: 100,
+			}}
+			className="text-sm bg-troo-primary py-3 px-6 rounded-lg border-4 shadow-lg border-troo-primary-light"
+		>
 			<ol
 				class="flex items-center whitespace-nowrap min-w-0"
 				aria-label="Breadcrumb"
@@ -68,7 +77,7 @@ const Breadcrumbs = () => {
 					</li>
 				))}
 			</ol>
-		</div>
+		</motion.div>
 	);
 };
 
