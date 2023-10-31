@@ -7,7 +7,7 @@ import Instagram from "../../shared/assets/images/icons/instagram.svg";
 
 const Footer = () => {
 	return (
-		<div className="pt-[50px] bg-troo-secondary text-troo-light bg-footer-top bg-no-repeat bg-left-top w-full">
+		<div className="pt-[50px] bg-troo-secondary bg-footer bg-cover bg-no-repeat bg-center text-troo-light bg-footer-top w-full">
 			<div className="main-container flex h-full gap-8 flex-col items-center w-full">
 				<div className="w-full flex md:flex-row flex-col items-center py-4 border-y border-troo-light border-opacity-20 gap-4 justify-between">
 					<img src={Logo} alt="brand logo" className="w-48 md:w-64" />

@@ -15,7 +15,7 @@ const DownloadBanner = () => {
 						type: "spring",
 						stiffness: 100,
 					}}
-					className="w-full bg-troo-primary rounded-xl text-troo-light p-8 md:p-16 flex flex-col md:flex-row items-center justify-between gap-6"
+					className="w-full bg-troo-primary bg-banner bg-no-repeat bg-center bg-cover rounded-xl text-troo-light p-8 md:p-16 flex flex-col md:flex-row items-center justify-between gap-6"
 				>
 					<div className="flex flex-col items-start gap-2">
 						<p className="text-xl">

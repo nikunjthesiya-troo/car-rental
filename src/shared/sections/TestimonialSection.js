@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const TestimonialSection = ({ isListingPage }) => {
 	return (
 		<div
-			className={`w-full py-[80px] text-troo-secondary ${
+			className={`w-full py-[80px] bg-review bg-cover bg-center bg-no-repeat text-troo-secondary ${
 				isListingPage ? "bg-troo-light" : "bg-troo-primary-light"
 			}`}
 		>
@@ -35,7 +35,7 @@ const TestimonialSection = ({ isListingPage }) => {
 						})}
 					</div>
 				) : (
-					<div className="w-full bg-troo-light rounded-xl flex flex-col items-start gap-10 p-4 md:p-12 lg:p-20">
+					<div className="w-full bg-troo-light bg-review bg-cover bg-center bg-no-repeat rounded-xl flex flex-col items-start gap-10 p-4 md:p-12 lg:p-20">
 						<div className="w-full flex md:flex-row flex-col md:items-center justify-between gap-6">
 							<h2 className="text-4xl font-bold text-troo-secondary">
 								What our valuable client

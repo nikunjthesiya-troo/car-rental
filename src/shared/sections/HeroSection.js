@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const HeroSection = () => {
 	return (
-		<div className="w-full py-[80px] bg-troo-primary-light text-troo-secondary">
+		<div className="w-full py-[80px] bg-troo-primary-light bg-bg-vector bg-no-repeat bg-left text-troo-secondary">
 			<div className="relative main-container flex flex-col gap-8 items-start justify-between">
 				<div className="w-full flex md:flex-row flex-col items-start justify-between gap-16">
 					<motion.div

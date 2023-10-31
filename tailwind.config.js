@@ -9,6 +9,10 @@ module.exports = {
 				"video-banner": "url('./shared/assets/images/video-bg.jpeg')",
 				"half-circle": "url('./shared/assets/images/half-circle.svg')",
 				"half-circle-2": "url('./shared/assets/images/half-circle-2.svg')",
+				"bg-vector": "url('./shared/assets/images/bg-vector.png')",
+				review: "url('./shared/assets/images/review-bg.png')",
+				banner: "url('./shared/assets/images/bg-banner.png')",
+				footer: "url('./shared/assets/images/footer-background.png')",
 				error: "url('./shared/assets/images/404.png')",
 			},
 			colors: {
