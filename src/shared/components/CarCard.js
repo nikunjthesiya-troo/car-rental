@@ -32,6 +32,7 @@ const CarCard = ({ data, isListingPage }) => {
 							/>
 						</svg>
 					</div>
+					{/* comment */}
 					<div className="w-full flex justify-start">
 						<div className="bg-troo-secondary flex items-center gap-1 text-troo-yellow p-3 rounded-md">
 							<Star />
